@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Télécharger ProtoOS</title>
+    <style>
+        body { 
+            background-color: #1a1a1a; 
+            color: #e0e0e0; 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            margin: 0; 
+            padding-top: 70px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        /* BARRE DE NAVIGATION */
+        .navbar {
+            background-color: #111;
+            border-bottom: 2px solid #e74c3c;
+            height: 70px;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 50px;
+            z-index: 1000;
+            box-sizing: border-box;
+        }
+
+        .nav-links { display: flex; align-items: center; gap: 30px; }
+
+        .navbar a {
+            color: #bbb;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.85em;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover { color: white; }
+
+        .navbar .brand {
+            color: white;
+            font-size: 1.4em;
+            letter-spacing: 2px;
+            font-weight: 800;
+        }
+
+        .btn-nav-download {
+            background-color: #e74c3c;
+            color: white !important;
+            padding: 10px 20px;
+            border-radius: 4px;
+            font-size: 0.8em !important;
+            transition: 0.3s;
+        }
+
+        /* CONTENU */
+        .container { 
+            padding: 60px 20px; 
+            max-width: 900px; 
+            margin: auto;
+            flex: 1;
+        }
+
+        .logo { width: 120px; margin-bottom: 20px; border-radius: 20px; }
+        h1 { font-size: 3em; color: #ffffff; margin-bottom: 10px; }
+        .subtitle { color: #888; margin-bottom: 40px; font-size: 1.1em; }
+
+        .download-box {
+            background: #242424;
+            border: 1px solid #333;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+        }
+
+        .btn-main-download {
+            background-color: #e74c3c;
+            color: white;
+            padding: 20px 50px;
+            font-size: 1.4em;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .checksum-table {
+            margin: 50px auto;
+            max-width: 650px;
+            font-family: monospace;
+            background: #111;
+            padding: 20px;
+            border-radius: 6px;
+            text-align: left;
+            border-left: 4px solid #e74c3c;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #0f0f0f;
+            color: #666;
+            padding: 40px 20px;
+            border-top: 1px solid #222;
+        }
+
+        .discord-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: #5865F2; /* Couleur officielle Discord */
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+            transition: 0.3s;
+        }
+
+        .discord-link:hover {
+            color: #7289da;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="brand">PROTO OS</div>
+        <div class="nav-links">
+            <a href="#">Accueil</a>
+            <a href="#">Docs</a>
+            <a href="#">Forum</a>
+            <a href="#" class="btn-nav-download" onclick="alert('Téléchargement lancé !')">TÉLÉCHARGER</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <img src="logo.png" alt="Logo ProtoOS" class="logo">
+        <h1>ProtoOS v1.0</h1>
+        <p class="subtitle">L'avenir de l'informatique libre est ici.</p>
+        <div class="download-box">
+            <button class="btn-main-download" onclick="alert('Préparation de l\'ISO...')">OBTENIR L'ISO MAINTENANT</button>
+        </div>
+        <div class="checksum-table">
+            <strong>SHA256:</strong> 9d4e8c1f32a4e8d9...f2a1
+        </div>
+    </div>
+
+    <footer>
+        <!-- Uniquement Discord -->
+        <a href="https://discord.gg" class="discord-link" target="_blank">
+             Rejoindre notre Discord
+        </a>
+        <p>© 2026 ProtoOS Project. Licence GPLv3.</p>
+    </footer>
+
+</body>
+</html>
